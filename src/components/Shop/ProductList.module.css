@@ -1,0 +1,139 @@
+.container {
+    width: 100%;
+    padding: 0 1.5rem;
+    box-sizing: border-box;
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    margin: 1rem 0;
+    box-sizing: border-box;
+}
+
+.loading {
+    padding: 2rem;
+    text-align: center;
+}
+
+.noFlowers {
+    padding: 2rem;
+    text-align: center;
+    color: #666;
+}
+
+.sortControls {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.sortButtons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.sortButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background: #f8f9fa;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.sortButton:hover {
+    background: #e9ecef;
+}
+
+.sortButton.active {
+    background: #e7f5ff;
+    border-color: #4dabf7;
+    color: #1971c2;
+}
+
+.sortInfo {
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-style: italic;
+    padding: 0.25rem 0;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding: 1rem 0;
+}
+
+.pageNumbers {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.pageButton {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #333;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.pageButton:hover:not(:disabled) {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+.pageButton.activePage {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.pageButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ellipsis {
+    padding: 0 0.5rem;
+    color: #666;
+}
+
+@media (max-width: 480px) {
+    .sortInfo {
+        text-align: left;
+    }
+    
+    .sortInfo span {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .pageButton {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    .pageNumbers {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
