@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:3000';
+const API_BASE_URL = 'https://eliftechflower-delivery-public-backend-production.up.railway.app';
 
 export const apiConfig = {
   baseURL: API_BASE_URL,
