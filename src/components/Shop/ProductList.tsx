@@ -14,6 +14,7 @@ interface ProductListProps {
     onAddToCart: (flower: Flower) => void;
 }
 
+
 const ProductList: React.FC<ProductListProps> = ({
                                                      flowers,
                                                      isLoading,
